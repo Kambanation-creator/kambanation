@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMBA NATION</title>
+    <link rel="icon" type="image/webp" href="frank.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-image:linear-gradient(90deg,rgb(0, 0, 0),rgb(251, 251, 251));
+  }
+
+  /* Navigation Bar */
+  .topnav {
+    background-image:linear-gradient(90deg,black,white);
+      display:flex;
+      align-items: center;
+      justify-content:center;
+      padding: 15px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: end;
+      gap:15px;
+  }
+
+  .topnav a {
+      color:white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      transition: 0.3s;
+  }
+
+  .topnav a:hover, .topnav a.active {
+      background-color:white;
+      color:black;
+      border-radius: 5px;
+  }
+
+  .search-bar {
+    float: right;
+    background-color:black;
+    color: rgb(0, 0, 0);
+}
+
+        .search-container input {
+            width: 220px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            transition: width 0.4s ease-in-out;
+            color:black;
+            background-color: white;
+        }
+
+        .search-container input:focus {
+            width: 280px;
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color:black;
+            font-size: 18px;
+        }
+
+  /* Video Section */
+  .video-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+  }
+
+  .video-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .video-container:hover {
+      transform: scale(1.05);
+  }
+
+  .video-container iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+  }
+
+  .video-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 8px 12px;
+      font-size: 14px;
+      text-align: center;
+  }
+  .rounded-div {
+            width:400px; 
+            height: 400px; 
+            background-image:linear-gradient(90deg,black,white,black);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        /* Input Fields */
+        .input-field {
+            width: 85%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color:white; /* Text color */
+            background-color:white; /* Light background */
+        }
+
+        /* Sign In Button */
+        .signin-btn {
+            width:100%;
+            height:auto;
+            background-color: white;
+            color:white; /* Blue text color */
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold; /* Make text bold */
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-align:center;
+            gap:20px;
+        }
+
+        /* Hover Effect */
+        .signin-btn:hover {
+            background-color:black;
+            transform: scale(1.05);
+            color:white; /* Darker text on hover */
+        }
+        .sign-in{
+            width:100%;
+            height:auto;
+            background-color: white;
+            color: #3498db; /* Blue text color */
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold; /* Make text bold */
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-align:center;
+            gap:20px;
+
+        }
+        .sign-in:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.05);
+            color: #2c3e50; /* Darker text on hover */
+        }
+        h2{
+            text-align:center;
+            color:white;
+            font-family:Arial;
+        }
+        h4{
+            text-align:center;
+            color:white;
+        }
+        h1{
+            text-align:center;
+            color:white;
+            font-family:Arial;
+        }
+        .image-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .image-section img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer{
+            font-family:Ariel;
+            font-size:20px;
+            color:white;
+            background-color: rgb(27, 29, 29);
+            text-align:center;
+        }
+        footer:hover{
+            background-color:white;
+            color: black;
+            transition: o.4s ease-in-out;
+        }
+            
+
+    
+</style>
+<body>
+    <div>
+        <div class="topnav">
+            <a href="home.html"><i class="fa fa-home"></i> Home</a>
+            <a href="home.html"><i class=" fa fa fa-futbol"></i>Designs</a>
+            <a href="email.html."><i class=" fa fa fa-contacts"></i>Sign up</a>
+            <div class="search-container">
+                <input type="text" id="search-container" placeholder="Search designs..." onkeyup="searchVideos()">
+                <i class="fa fa-search search-icon"></i>
+                </div>
+         </div> 
+         <h1>Few of the examples we sell</h1>
+         <div class="image-section">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_706,h_706/global/777580/22/mod01/fnd/ARE/fmt/png/" alt="Mancity">
+            <img src="https://m.media-amazon.com/images/I/81pWuxsAZJL.jpg" alt="Image 2">
+            <img src="https://img01.ztat.net/article/spp-media-p1/5437a16b4496493fba16d8ad0efcb9b7/d0f5a1abae874b2dbfe79cf12291d317.jpg?imwidth=762" alt="Image 3">
+            <img src="https://i.etsystatic.com/39666523/r/il/5cb75f/6172507109/il_570xN.6172507109_ezqa.jpg" alt="Image 4">
+            <img src="https://ektarfa.online/cdn/shop/products/6_a8371971-b8f9-42ac-a580-6ab0689ec853_2048x.jpg?v=1632289556" alt="Image 5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRney7tkkex7O9C1FPVtTqiX-BSEVwK7h7n7w&s" alt="Mancity">
+            <img src="https://images.pexels.com/photos/702350/pexels-photo-702350.jpeg?cs=srgb&dl=pexels-garrettmorrow-702350.jpg&fm=jpg" alt="Mancity">
+            <img src="https://cdn.sportingkicks.co.uk/assets/images/products/large/5ff4996fe3072.jpg" alt="Mancity">
+            <img src="https://ih1.redbubble.net/image.4664637733.9962/ssrco,mhoodiez,mens,heather_oatmeal,front,square_product,600x600-bg,f8f8f8.jpg" alt="Mancity">
+            <img src="https://m.media-amazon.com/images/I/61sxMBiXRoL.jpg" alt="Mancity">
+        </div>
+        <footer>Hope you found this website helpful if you would like to make an order call 0722842628.Have a nice day</footer>
